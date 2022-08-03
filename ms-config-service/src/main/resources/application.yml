@@ -1,0 +1,12 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: ms-config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Danif79/project-final.git
+          search-paths: ms-config-data
+          default-label: ${GIT_BRANCH:main}
